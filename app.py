@@ -1,10 +1,10 @@
 import streamlit as st
 import pickle
 import requests
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import os
 
-load_dotenv()
+# load_dotenv()
 api_key = os.getenv("API_KEY")
 
 movies_list = pickle.load(open('movies.pkl','rb'))
