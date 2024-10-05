@@ -26,10 +26,9 @@ def recommend(movie):
   movieList = sorted(list(enumerate(similarity[index])),reverse=True,key=lambda x:x[1])[1:6]
   for i in movieList:
       movie_id = movies_list.loc[i[0]].id
-      
       poster_path = fetch_poster(movie_id)
       recommended_movie.append(movies_list.loc[i[0]].title) 
-      recommended_movie_poster.append(poster_path) 
+      recommended_movie_poster.append(poster_path)
   return recommended_movie,recommended_movie_poster
 
 st.title('Movie Recommendation System')
